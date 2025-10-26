@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <meta name="description"
+        content="Paso 1 del proceso de compra de entradas para el Teatro Municipal. Selecciona cantidad y tipo de ticket.">
+
+    <title>Comprar Entradas: Selección - Teatro Gran Rex</title>
+
+    <link rel="stylesheet" href="./assets/theme/css/entrada.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap">
+    </noscript>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5KP0PF26Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B5KP0PF26Q');
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container-nav">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo-teatro.png" alt="Logo Teatro Gran Rex" class="logo-img-fix">
+                <span class="navbar-caption">Teatro Gran Rex</span>
+            </a>
+            <ul class="nav-dropdown">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="salas.html">Salas</a></li>
+                <li class="nav-item"><a class="nav-link" href="cartelera.html">Cartelera</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <a class="btn btn-registro" href="registro.html">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+    <section class="main-content">
+        <div class="container-main">
+            <div class="content-header">
+                <h1 class="page-title">
+                    Compra de Entradas
+                </h1>
+                <p class="subtitle">
+                    Completa el proceso de compra en 4 simples pasos
+                </p>
+            </div>
+
+            <div class="purchase-flow row">
+
+                <div class="purchase-steps-container col-lg-8">
+                    <div class="main-card">
+
+                        <div class="step-indicator">
+                            <div class="step step-active">
+                                <div class="step-number">1</div>
+                                <small>Selección</small>
+                            </div>
+                            <div class="step step-inactive">
+                                <div class="step-number">2</div>
+                                <small>Datos</small>
+                            </div>
+                            <div class="step step-inactive">
+                                <div class="step-number">3</div>
+                                <small>Pago</small>
+                            </div>
+                            <div class="step step-inactive">
+                                <div class="step-number">4</div>
+                                <small>Confirmación</small>
+                            </div>
+                        </div>
+
+                        <div class="obra-info">
+                            <h2 class="obra-title"><strong>Romeo y Julieta</strong></h2>
+                            <p>Viernes, 25 de Octubre 2025 - 20:30 hs</p>
+                            <p>Sala Principal</p>
+                            <p class="duration-text">Duración: 2h 30min</p>
+                        </div>
+
+                        <div class="cantidad-section">
+                            <h3 class="section-title">Cantidad de Entradas</h3>
+                            <div class="cantidad-selector">
+                                <button type="button" onclick="cambiarCantidad(-1)"
+                                    class="cantidad-btn minus-btn">−</button>
+                                <span id="cantidadDisplay" class="cantidad-display">1</span>
+                                <button type="button" onclick="cambiarCantidad(1)"
+                                    class="cantidad-btn plus-btn">+</button>
+                            </div>
+                            <p class="max-info">Máximo 8 entradas por compra</p>
+                        </div>
+
+                        <div class="tipo-section">
+                            <h3 class="section-title">Tipo de Entrada</h3>
+                            <div class="tipo-grid">
+
+                                <div id="tipo-general" class="entrada-option selected"
+                                    onclick="seleccionarTipo(this, 'General', 3500)">
+                                    <div><strong>General</strong></div>
+                                    <div class="precio-grande">$3.500</div>
+                                </div>
+
+                                <div id="tipo-estudiante" class="entrada-option"
+                                    onclick="seleccionarTipo(this, 'Estudiante', 2500)">
+                                    <div><strong>Estudiante</strong></div>
+                                    <div class="precio-grande">$2.500</div>
+                                </div>
+
+                                <div id="tipo-jubilado" class="entrada-option"
+                                    onclick="seleccionarTipo(this, 'Jubilado', 2000)">
+                                    <div><strong>Jubilado</strong></div>
+                                    <div class="precio-grande">$2.000</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="summary-container col-lg-4">
+                    <div class="main-card summary-card">
+
+                        <h3 class="section-title">Resumen</h3>
+
+                        <div class="resumen-details">
+                            <div class="resumen-line">
+                                <span>Obra:</span>
+                                <strong>Romeo y Julieta</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Fecha:</span>
+                                <strong>25/10/2025</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Horario:</span>
+                                <strong>20:30 hs</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Sala:</span>
+                                <strong>Principal</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Cantidad:</span>
+                                <strong id="resumenCantidad">1 entrada</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Tipo:</span>
+                                <strong id="resumenTipo">General</strong>
+                            </div>
+                            <div class="resumen-line subtotal-line">
+                                <span>Subtotal:</span>
+                                <strong id="resumenSubtotal">$3.500</strong>
+                            </div>
+                            <div class="resumen-line">
+                                <span>Cargo por servicio:</span>
+                                <strong id="resumenCargo">$350</strong>
+                            </div>
+                        </div>
+
+                        <div class="resumen-total-box">
+                            <div class="resumen-total-line">
+                                <span>Total:</span>
+                                <span id="resumenTotal">$3.850</span>
+                            </div>
+                        </div>
+
+                        <div class="purchase-button-container">
+                            <button onclick="confirmarCompra()" class="btn btn-netflix-primary">Continuar al
+                                Pago</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let cantidad = 1;
+            let precioUnitario = 3500;
+            let tipoActual = 'General'; // Capitalizado para resumen
+
+            const preciosBase = {
+                'General': 3500,
+                'Estudiante': 2500,
+                'Jubilado': 2000
+            };
+            const CARGO_SERVICIO_PORCENTAJE = 0.1; // 10%
+
+            function cambiarCantidad(delta) {
+                cantidad = Math.max(1, Math.min(8, cantidad + delta));
+                document.getElementById('cantidadDisplay').textContent = cantidad;
+                actualizarResumen();
+            }
+
+            function seleccionarTipo(elemento, tipo, precio) {
+                document.querySelectorAll('.entrada-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+
+                elemento.classList.add('selected');
+
+                tipoActual = tipo;
+                precioUnitario = precio;
+                actualizarResumen();
+            }
+
+            function actualizarResumen() {
+                const subtotal = precioUnitario * cantidad;
+                const cargo = Math.round(subtotal * CARGO_SERVICIO_PORCENTAJE);
+                const total = subtotal + cargo;
+
+                document.getElementById('resumenCantidad').textContent = cantidad + (cantidad === 1 ? ' entrada' : ' entradas');
+                document.getElementById('resumenTipo').textContent = tipoActual;
+                document.getElementById('resumenSubtotal').textContent = '$' + subtotal.toLocaleString('es-AR');
+                document.getElementById('resumenCargo').textContent = '$' + cargo.toLocaleString('es-AR');
+                document.getElementById('resumenTotal').textContent = '$' + total.toLocaleString('es-AR');
+            }
+
+            function confirmarCompra() {
+                // Simulación de la confirmación
+                const subtotal = precioUnitario * cantidad;
+                const cargo = Math.round(subtotal * CARGO_SERVICIO_PORCENTAJE);
+                const total = subtotal + cargo;
+
+                const codigo = 'TM-2025-' + String(Math.floor(Math.random() * 999999)).padStart(6, '0');
+
+                alert('¡Compra confirmada!\n\n' +
+                    ' Obra: Romeo y Julieta\n' +
+                    'Fecha: Viernes 25/10/2025 - 20:30hs\n' +
+                    'Sala: Principal\n\n' +
+                    'Cantidad: ' + cantidad + ' entrada(s)\n' +
+                    'Tipo: ' + tipoActual + '\n' +
+                    'Total: $' + total.toLocaleString('es-AR') + '\n\n' +
+                    'Código de confirmación:\n' + codigo + '\n\n' +
+                    'Te hemos enviado la confirmación por email.');
+            }
+
+            window.addEventListener('load', function () {
+                // Inicializa el resumen con la opción General
+                actualizarResumen();
+            });
+        </script>
+    </section>
+</body>
+
+</html>
